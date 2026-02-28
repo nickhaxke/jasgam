@@ -1,0 +1,61 @@
+# Environment
+.env
+
+# Database
+storage/hasheem.db
+storage/*.db
+
+# Uploads (user content)
+uploads/
+
+# Storage (logs, cache)
+storage/logs/
+storage/cache/
+storage/migrations_executed.log
+
+# Config with credentials
+config/config.php
+config/config.online.php
+confi/
+
+# Temp files
+tmpclaude-*
+nul
+*.a
+*.s
+config/app.s
+core/Database.a
+
+# Debug/test files
+debug*.php
+test*.php
+*-test*.php
+*-fix*.php
+fix-*.php
+check-*.php
+create-*.php
+verify-*.php
+simple.php
+home-test.php
+announcement-fix-tool.php
+direct-test-announcements.php
+quick-test-announcement.php
+test/
+Database.php
+
+# Old/backup views
+views/home/index_fix.php
+views/home/index_new.php
+views/layouts/main-new.php
+views/admin/announcements-backup.php
+views/admin/announcements-simple.php
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store

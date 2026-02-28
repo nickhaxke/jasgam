@@ -1,0 +1,89 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Cyber Legends",
+      "category": "Action",
+      "price": 59.99,
+      "stock": 15,
+      "description": "Immerse yourself in the neon-soaked streets of Neo-Tokyo",
+      "active": true,
+      "created_at": "2026-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Neon Drift",
+      "category": "Racing",
+      "price": 49.99,
+      "stock": 8,
+      "description": "High-speed racing through cyber cities",
+      "active": true,
+      "created_at": "2026-01-20"
+    },
+    {
+      "id": 3,
+      "name": "Quantum Zero",
+      "category": "Puzzle",
+      "price": 59.99,
+      "stock": 0,
+      "description": "Mind-bending quantum puzzles",
+      "active": false,
+      "created_at": "2026-02-01"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@hasheem.com",
+      "role": "admin",
+      "blocked": false,
+      "created_at": "2026-01-01"
+    },
+    {
+      "id": 2,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "user",
+      "blocked": false,
+      "created_at": "2026-02-01"
+    },
+    {
+      "id": 3,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "user",
+      "blocked": false,
+      "created_at": "2026-02-10"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1001,
+      "user_id": 2,
+      "user_name": "John Doe",
+      "item_count": 2,
+      "total": 89.99,
+      "status": "completed",
+      "created_at": "2026-02-10 10:30:00"
+    },
+    {
+      "id": 1002,
+      "user_id": 3,
+      "user_name": "Jane Smith",
+      "item_count": 1,
+      "total": 59.99,
+      "status": "pending",
+      "created_at": "2026-02-12 14:15:00"
+    },
+    {
+      "id": 1003,
+      "user_id": 2,
+      "user_name": "John Doe",
+      "item_count": 3,
+      "total": 149.97,
+      "status": "shipped",
+      "created_at": "2026-02-11 09:00:00"
+    }
+  ]
+}
