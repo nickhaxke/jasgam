@@ -41,7 +41,7 @@ announcement-fix-tool.php
 direct-test-announcements.php
 quick-test-announcement.php
 test/
-Database.php
+/Database.php
 
 # Old/backup views
 views/home/index_fix.php

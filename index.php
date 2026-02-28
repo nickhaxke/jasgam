@@ -31,10 +31,17 @@ use Core\Database;
 // Load environment variables
 Env::load(__DIR__ . '/.env');
 
-// DEV MODE: Show all errors
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// Error display based on environment
+$appEnv = Env::get('APP_ENV', 'production');
+if ($appEnv === 'local' || $appEnv === 'development') {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+} else {
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+    error_reporting(0);
+}
 
 ErrorHandler::register();
 

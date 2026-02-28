@@ -8,17 +8,22 @@ $scriptDir = trim($scriptDir, '/');
 // online root example: /index.php => ''
 $detectedBasePath = ($scriptDir === '' || $scriptDir === '.') ? '' : '/' . $scriptDir;
 
+// Helper to read env with fallback
+$env = function($key, $default = null) {
+    return $_ENV[$key] ?? getenv($key) ?: $default;
+};
+
 return [
     'base_path' => $detectedBasePath,
     // Compatibility prefix(es) accepted by router (legacy hardcoded links)
     'legacy_base_paths' => ['/hasheem'],
-    'env' => 'local',
+    'env' => $env('APP_ENV', 'local'),
     'db' => [
-        'host' => 'localhost',
-        'name' => 'hasheem',
-        'user' => 'root',
-        'pass' => '/OEGwfI6]WxXSSSt',
-        'charset' => 'utf8mb4',
+        'host'    => $env('DB_HOST', 'localhost'),
+        'name'    => $env('DB_NAME', 'hasheem'),
+        'user'    => $env('DB_USER', 'root'),
+        'pass'    => $env('DB_PASS', ''),
+        'charset' => $env('DB_CHARSET', 'utf8mb4'),
     ],
     'csrf_token_key' => '_csrf',
 ];
