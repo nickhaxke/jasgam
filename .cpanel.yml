@@ -1,0 +1,17 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/marstests/jusgam.marstests.online/
+    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/cp .env.example $DEPLOYPATH
+    - /bin/cp -R app $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    - /bin/cp -R core $DEPLOYPATH
+    - /bin/cp -R routes $DEPLOYPATH
+    - /bin/cp -R storage/migrations $DEPLOYPATH/storage/
+    - /bin/cp storage/schema.sql $DEPLOYPATH/storage/
+    - /bin/cp storage/migrations.sql $DEPLOYPATH/storage/
+    - /bin/cp storage/REFERENCE_QUERIES.sql $DEPLOYPATH/storage/
+    - /bin/cp -R views $DEPLOYPATH
