@@ -63,3 +63,4 @@ Jusgam is a custom PHP MVC application for listing games/accessories, handling o
 - Brand name has been updated to "Jusgam" in main user-facing views.
 - Some legacy files may still contain the old brand name and can be updated next.
 # jasgam
+# jasgam
